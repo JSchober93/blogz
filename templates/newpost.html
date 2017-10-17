@@ -4,13 +4,22 @@
 
 {% block content %}
 
+<head>
+    <style>
+    .error {
+        color: red;
+    }
+    </style>
+</head>
 <form action='blog' method='POST'>
     <h3>Title:</h3>
-    <input type='text' name='title'>
+    <input type='text' name='title' value='{{ title }}'>
+    <span class='error'>{{title_error}}</span>
     <br>
     <label>Blog Entry:</label>
     <br>
-    <textarea name='body' rows='20' cols='30'></textarea>
+    <textarea name='body' rows='20' cols='30'>{{ body }}</textarea>
+    <span class='error'>{{body_error}}</span>
     <br>
     <input type='submit' value='Post to blog!'>
 
