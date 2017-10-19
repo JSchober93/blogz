@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>These are the current bloggers active on our site. Click a name to see what they have to say!</h3>
+{% for user in blogger_list %}
+    <h3>
+        <a href="/blog?user={{ user.id }}">
+        {{ user.username }}
+        </a>
+    </h3>
+
+
+{% endfor %}
+
+{% endblock %}

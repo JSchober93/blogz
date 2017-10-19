@@ -2,11 +2,22 @@
 <html>
     <head>
         <title>{{title}}</title>
+        <style>
+            .error {
+                color: red;
+            }
+        </style>
     </head>
 <body>
 
+    
     <div style='float: right'>
-        <a href="/">Main Blog Page</a> | <a href="newpost">Add a Blog Entry</a>
+        <a href='/'>Blogger List</a> |
+        <a href='blog'>Main Blog Page</a> | 
+        <a href='newpost'>Add a Blog Entry</a> 
+        |
+        
+        <a href='/logout'>Log out</a>
     </div>
 
     {% block content %}
